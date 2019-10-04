@@ -1,3 +1,7 @@
+task buildWSO2(type:Exec){
+	commandLine 'mvn', 'clean', 'install'
+}
+
 task deployWSO2(type:Exec) {
-	commandLine 'mvn', 'clean', 'install', 'org.wso2.maven:maven-car-deploy-plugin:deploy-car', '-Pdeploy-local', "-s../settings.xml"
+	commandLine 'mvn', 'org.wso2.maven:maven-car-deploy-plugin:deploy-car', '-Pdeploy-local', "-s../settings.xml"
 }
