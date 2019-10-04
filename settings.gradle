@@ -8,3 +8,6 @@
  */
 
 rootProject.name = 'ei-deployment'
+
+include 'wso2-ei-deployment'
+include 'wso2-ei-deploymentCompositeApplication'
