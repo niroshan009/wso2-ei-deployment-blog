@@ -16,7 +16,8 @@ task buildAndDeploy() {
     dependsOn ':wso2-ei-deploymentCompositeApplication:buildWSO2'
     dependsOn ':wso2-ei-deploymentCompositeApplication:deployWSO2'
 
-    tasks.findByPath(':wso2-ei-deploymentCompositeApplication:deployWSO2').mustRunAfter ':wso2-ei-deployment:buildWSO2'
+    tasks.findByPath(':wso2-ei-deploymentCompositeApplication:buildWSO2').mustRunAfter ':wso2-ei-deployment:buildWSO2'
     tasks.findByPath(':wso2-ei-deploymentCompositeApplication:deployWSO2').mustRunAfter ':wso2-ei-deploymentCompositeApplication:buildWSO2'
+    
 
 }
